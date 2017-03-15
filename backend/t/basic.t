@@ -5,5 +5,6 @@ use Test::Mojo;
 
 my $t = Test::Mojo->new('Backend');
 $t->get_ok('/')->status_is(200)->content_like(qr/Mojolicious/i);
+$t->get_ok('/hello')->status_is(200)->content_like(qr/Mojolicious/i);
 
 done_testing();

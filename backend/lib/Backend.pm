@@ -13,6 +13,8 @@ sub startup {
 
   # Normal route to controller
   $r->get('/')->to('example#welcome');
+  $r->get('/hello')->to('hello#hello');
+    # $r->get('/hello')->to(controller => 'hello', action => 'hello');
 }
 
 1;
